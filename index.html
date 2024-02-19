@@ -190,7 +190,7 @@
                     <!-- price details -->
                     <div class="flex-col items-center justify-center w-1/4 px-16">
                         <div><img src="images/fare.png" alt=""></div>
-                        <div><h4 class="text-xl font-bold">550 Taka</h4></div>
+                        <div><h4 class="text-xl font-bold ">550 Taka</h4></div>
                         <div><p>Per seat</p></div>
                     </div>
 
@@ -264,11 +264,18 @@
                                             <table class="min-w-full bg-white shadow-md rounded-xl">
                                                 <thead>
                                                     <tr class="bg-blue-gray-100 text-gray-700">
-                                                        <th class="py-3 px-4 text-left">Seat <span>0</span></th>
+                                                        <th class="py-3 px-4 text-left">Seat <span id="seat-count">0</span></th>
                                                         <th class="py-3 px-4 text-left">Class</th>
                                                         <th class="py-3 px-4 text-left">Price</th>
+                                                         
                                                     </tr>
+                                                    <hr />
                                                 </thead>
+                                                
+                                                <ul id="selected-place-container"
+                                                class="selected-place-container">
+
+                                                </ul>
                                                 
                                                     <!-- Add more rows as needed -->
                                                     <tr class="border-b border-blue-gray-200">
@@ -276,8 +283,11 @@
                                                         <td class="py-3 px-4"></td>
                                                         <td class="py-3 px-4 font-medium">0</td>
                                                     </tr>
+                                                    
                                                 </tbody>
+                                                
                                             </table>
+                                            
 
                                             <div class="join pt-4">
                                                 <input type="text" placeholder="Have you coupon?" class="input input-bordered join-item" /> 
