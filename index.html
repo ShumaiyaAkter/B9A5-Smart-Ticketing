@@ -13,6 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100..900&display=swap" rel="stylesheet">
 
     <style>
+
+        li{
+            display: flex;
+            gap: 20px;
+            margin: auto;
+            text-align: center;
+            justify-content: space-around;
+        }
         .font-manrope{
             font-family: "Raleway", sans-serif;
         }
@@ -25,6 +33,7 @@
         border-right: 1px dashed #cbd5e0; 
     }
 
+    
 
       </style>
 
@@ -257,36 +266,38 @@
                                     <div class="divide-dashed mb-4"></div>
                                 </div>
                                 <!-- Table part -->
-                                <div class="w-full">
+                                <div class="w-full bg-gray-100 h-1/2">
                                     <!-- component -->
                                     <div class="flex min-h-screen justify-center">
                                         <div class="overflow-x-auto">
-                                            <table class="min-w-full bg-white shadow-md rounded-xl">
-                                                <thead>
-                                                    <tr class="bg-blue-gray-100 text-gray-700">
-                                                        <th class="py-3 px-4 text-left">Seat <span id="seat-count">0</span></th>
-                                                        <th class="py-3 px-4 text-left">Class</th>
-                                                        <th class="py-3 px-4 text-left">Price</th>
-                                                         
-                                                    </tr>
-                                                    <hr />
-                                                </thead>
+                                            <div class="min-w-full shadow-md">
+
+                                                <div class=" w-[300px] ">
+                                                    <div class="flex justify-around items-center">
+                                                        <div>Seat <span id="seat-count">0</span></div>
+                                                        <div>Class</div>
+                                                        <div>Price</div>
+                                                    </div>
+                                                    <div class="divide-dashed mb-4"></div>
+                                                    <hr/>
                                                 
                                                 <ul id="selected-place-container"
                                                 class="selected-place-container">
 
                                                 </ul>
+                                                </div>
                                                 
-                                                    <!-- Add more rows as needed -->
-                                                    <tr class="border-b border-blue-gray-200">
-                                                        <td class="py-3 px-4 font-medium">Total Price</td>
-                                                        <td class="py-3 px-4"></td>
-                                                        <td class="py-3 px-4 font-medium">0</td>
-                                                    </tr>
+                                                <div class="flex justify-between mt-8">
+                                                    <hr/>
+                                                    <div>Total Price</div>
+                                                    <div>BDT <span>0</span></div>
+                                                </div>
+                                                
                                                     
-                                                </tbody>
+                                                    
+                                               
                                                 
-                                            </table>
+                                            </div>
                                             
 
                                             <div class="join pt-4">
