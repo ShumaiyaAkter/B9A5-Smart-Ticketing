@@ -36,6 +36,19 @@ for (let index=0;index<seatButtons.length;index++){
         li.appendChild(p)
         li.appendChild(p2)
         li.appendChild(p3)
+
+
+        const seatLeft=document.getElementById("seat-left").innerText;
+        const convertedSeat=parseInt(seatLeft);
+        document.getElementById("seat-left").innerText=convertedSeat-1
+
+        if(convertedSeat>8){
+            alert("No More seat Available")
+            return;
+
+        }
+
+
         selectedContainer.appendChild(li);
 
 
@@ -99,7 +112,7 @@ function totalCost(id,value){
         const totalCost=document.getElementById("total-cost").innerText;
         const newTotalCost=parseInt(totalCost);
 
-        if(couponCode=="NEW15"){
+        if(couponCode === "NEW15"){
             setInnerText("grand-total",newTotalCost*0.85);
         }
         else if(couponCode === "COUPLE 20"){
