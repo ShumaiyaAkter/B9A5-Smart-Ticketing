@@ -2,6 +2,7 @@
 function setSeatColor(elementId){
     const element=document.getElementById(elementId);
     element.classList.add('bg-green-500');
+    
 
 }
 
@@ -16,10 +17,21 @@ for (let index=0;index<seatButtons.length;index++){
     console.log(seat);
      
     seat.addEventListener("click",function(e){
-        // console.log("clicked");
+       
         count=count+1;
         const seatNum=seat.querySelector("h3").innerText;
         console.log(seatNum);
+
+        e.target.setAttribute("disabled", true);
+
+        if (
+            getValueById("seat-count") + 1 > 4 ||
+            getValueById("seat-left") - 0 < 0
+          ) {
+            alert("you can't purchase more than 4 tickets");
+            return;
+          }
+
 
         const selectedContainer=document.getElementById("selected-place-container");
         const li=document.createElement("li");
@@ -68,12 +80,13 @@ for (let index=0;index<seatButtons.length;index++){
         const btn=document.getElementById("apply-btn");
         btn.addEventListener("click",function(){
             
-
+            
             const couponElement=document.getElementById("input-field").value;
             const couponCode=couponElement.split(" ").join(" ").toUpperCase();
             console.log(couponCode);
             if(couponCode === "NEW15" || couponCode === "COUPLE 20"){
                 grandTotalCost(couponCode);
+                btn.setAttribute("disabled", true);
             }
             else{
                 alert("Invalid Coupon");
@@ -81,6 +94,7 @@ for (let index=0;index<seatButtons.length;index++){
             
 
         })
+        
         
         
 
@@ -125,6 +139,12 @@ function totalCost(id,value){
         
     
  }
+
+
+ function getValueById(id) {
+    const targetElement = document.getElementById(id).innerText;
+    return parseInt(targetElement);
+  }
 
 
 
